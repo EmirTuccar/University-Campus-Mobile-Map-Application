@@ -8,7 +8,7 @@ This project is a Xamarin.Forms mobile application designed for use in a univers
 
 ![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/65ee0ff3-1ba5-43ca-aab1-6f114c935092)
 
-                                                             ![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/29e5c8be-b397-4aa6-9e09-dd0597a98b5a)
+![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/29e5c8be-b397-4aa6-9e09-dd0597a98b5a)
 
 Class and floors appearence are images not software design you should add it in your project.
 
