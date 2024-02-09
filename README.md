@@ -5,6 +5,8 @@ Introduction
 
 This project is a Xamarin.Forms mobile application designed for use in a university campus setting. It provides an interactive map and lesson schedule for students and staff, facilitating easy navigation and access to essential information about the university's facilities.
 
+![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/4cd6dc1b-9e9b-43b3-8d63-970d58d43751)
+
 Features
 Interactive Map: Users can view and interact with a detailed map of the university campus, including locations of classrooms, laboratories, and other important facilities.
 
