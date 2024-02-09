@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAPProje.Views"
+             x:Class="MAPProje.Views.MapPage"
+            
+             Title="                                Map">
+
+    <Grid>
+        <!-- Define rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for SearchBar -->
+            <RowDefinition Height="Auto"/>
+            <!-- Row for Button -->
+            <RowDefinition Height="*"/>
+            <!-- Row for Image, taking up the remaining space -->
+        </Grid.RowDefinitions>
+
+        
+        <!-- SearchBar in a Frame -->
+        <Frame Margin="5,5,5,0"
+           Grid.Row="0"
+           BorderColor="Gray"
+           BackgroundColor="Gray"
+           CornerRadius="30"
+           Padding="0"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="Center"
+           HeightRequest="40">
+            <SearchBar x:Name="searchBar"
+                   Placeholder="Search items..."
+                   BackgroundColor="Transparent"
+                   TextColor="White"
+                   PlaceholderColor="White"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   TextChanged="OnSearchTextChanged"/>
+        </Frame>
+
+        <!-- ListView for Suggestions -->
+        <ListView x:Name="suggestionListView"
+                    Grid.Row="1"
+                    ItemSelected="OnSuggestionSelected"
+                    IsVisible="False"
+                    HeightRequest="100">
+
+            <!-- Define ItemTemplate for displaying items -->
+        </ListView>
+   
+
+
+
+
+
+        <Frame 
+            Grid.Row="1"
+            x:Name="pickerFrame"
+            Margin="5,0,5,0"
+            BorderColor="Gray"
+            BackgroundColor="Gray"
+            CornerRadius="30"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            HeightRequest="40">
+            <Picker x:Name="floorPicker"
+                Title="Select Floor"
+                HorizontalTextAlignment="Center"
+                    TextColor="White"
+                TitleColor="White"
+                    SelectedIndexChanged="OnFloorSelected"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+                
+                <!-- Picker items would be added in the code-behind -->
+                <Picker.Items>
+                    <x:String>Floor -1</x:String>
+                    <x:String>Floor 0</x:String>
+                    <x:String>Floor 1</x:String>
+                    <x:String>Floor 2</x:String>
+                    <x:String>Floor 3</x:String>
+                    <x:String>Floor 4</x:String>
+                    
+                </Picker.Items>
+            </Picker>
+        </Frame>
+
+
+
+        <!-- Place Image in the third row -->
+
+        <ContentView Grid.Row="2" x:Name="imageContainer">
+            <AbsoluteLayout x:Name="absoluteLayout">
+
+                
+                
+
+
+                <Image Source="Floor0.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="mapImage">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageDoubleTapped" NumberOfTapsRequired="2"/>
+                        <PanGestureRecognizer PanUpdated="OnPanUpdated"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- Markers will be added here -->
+                <Image Source="marker.png" x:Name="markerImage"
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 30, 30"
+                    AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+        </ContentView>
+
+
+
+
+
+    </Grid>
+
+
+</ContentPage>

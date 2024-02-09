@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAPProje.Views.LessonPage"
+             Title="                           Schedule"
+             xmlns:local="clr-namespace:MAPProje.Views"  
+             xmlns:model="clr-namespace:MAPProje.Models"  
+             x:Name="BrowseItemsPage">
+
+
+    <Grid>
+        <!-- Define rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for SearchBar -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <!-- Row for Image, taking up the remaining space -->
+        </Grid.RowDefinitions>
+
+        <Frame Margin="5,5,5,0"
+           Grid.Row="0"
+           BorderColor="Gray"
+           BackgroundColor="Gray"
+           CornerRadius="30"
+           Padding="0"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="Center"
+           HeightRequest="40">
+            <SearchBar x:Name="searchBar"
+                   Placeholder="Search items..."
+                   BackgroundColor="Transparent"
+                   TextColor="White"
+                   PlaceholderColor="White"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   TextChanged="OnSearchTextChanged"/>
+        </Frame>
+
+        <!-- ListView for Suggestions -->
+        <ListView x:Name="suggestionListView"
+                    Grid.Row="1"
+                    ItemSelected="OnSuggestionSelected"
+                    IsVisible="False">
+
+            <!-- Define ItemTemplate for displaying items -->
+        </ListView>
+
+
+
+
+        <ContentView Grid.Row="1" x:Name="imageContainer"
+             VerticalOptions="Center" HorizontalOptions="Center"
+             Margin =" 5,30,5,5">
+            <AbsoluteLayout x:Name="absoluteLayout">
+                <Image Source="C209L.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="lessonImage">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageDoubleTapped" NumberOfTapsRequired="2"/>
+                        <PanGestureRecognizer PanUpdated="OnPanUpdated"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- Markers will be added here -->
+            </AbsoluteLayout>
+        </ContentView>
+
+
+    </Grid>
+
+</ContentPage>
