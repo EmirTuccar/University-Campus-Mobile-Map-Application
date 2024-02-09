@@ -4,6 +4,7 @@ Project Name: University Campus App
 Introduction
 
 This project is a Xamarin.Forms mobile application designed for use in a university campus setting. It provides an interactive map and lesson schedule for students and staff, facilitating easy navigation and access to essential information about the university's facilities.
+
 ![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/4cd6dc1b-9e9b-43b3-8d63-970d58d43751)
 
 ![image](https://github.com/EmirTuccar/University-Campus-Mobile-Map-Application/assets/94643722/65ee0ff3-1ba5-43ca-aab1-6f114c935092)
