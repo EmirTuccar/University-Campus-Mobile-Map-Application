@@ -5,9 +5,13 @@ This project is a Xamarin.Forms mobile application designed for use in a univers
 
 Features
 Interactive Map: Users can view and interact with a detailed map of the university campus, including locations of classrooms, laboratories, and other important facilities.
+
 Search Functionality: The app includes a search bar for quick access to specific classrooms or facilities. Search suggestions are dynamically displayed as users type.
+
 Image Display: For selected locations, the app displays images to provide users with a visual reference.
+
 Zoom and Pan: The map supports zooming and panning gestures for detailed exploration.
+
 Lesson Schedule: Users can view the lesson schedule for each classroom, helping students and staff plan their day efficiently.
 
 Usage
